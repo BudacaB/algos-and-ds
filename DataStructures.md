@@ -1,3 +1,16 @@
+## Big O asymptotic analysis (Big O notation)
+
+- how long an algorithm takes to run
+- as elements passed as input increase, how many operations do we have to do? (algorithmic efficiency)
+
+### What is good code?
+- readable
+- scalable -> measured by Big O
+
+
+
+---
+
 ## Arrays (or Lists)
 
 - organizes items sequentially in memory
