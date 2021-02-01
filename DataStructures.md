@@ -7,6 +7,10 @@
 - readable
 - scalable -> measured by Big O
 
+### Types:
+- O(n) -> Linear time
+- O(1) -> Constant time
+
 
 
 ---
