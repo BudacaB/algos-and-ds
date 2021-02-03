@@ -51,6 +51,12 @@ function anotherFunChallenge(input) {
 // BIG O(4 + 5n) -> O(n)
 ```
 
+### Rules:
+1. Worst case
+2. Remove constants
+3. Different terms for inputs
+4. Drop non dominants
+
 ---
 
 ## Arrays (or Lists)
