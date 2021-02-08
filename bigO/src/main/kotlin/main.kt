@@ -1,3 +1,4 @@
+import java.lang.StringBuilder
 import kotlin.math.floor
 import kotlin.system.measureNanoTime
 
@@ -44,15 +45,45 @@ fun main(args: Array<String>) {
 //    }
 
     // overall it's O(n)
-    
 
-    fun compressBoxesTwice(boxes: Array<String>) {
-        boxes.forEach { box -> println(box) }
 
-        boxes.forEach { box -> println(box) }
-    }
+//    fun compressBoxesTwice(boxes: Array<String>) {
+//        boxes.forEach { box -> println(box) }
+//
+//        boxes.forEach { box -> println(box) }
+//    }
 
     // O(2n) => O(n)
+    // Rule 2 - drop constants
+
+// -------
+
+//    fun compressBoxesTwice(boxes: Array<String>, boxes2: Array<String>) {
+//        boxes.forEach { box -> println(box) }
+//
+//        boxes2.forEach { box -> println(box) }
+//    }
+
+    // O(a + b) -> if nested => O(a * b)
+    // Rule 3 - different inputs
+
+
+    // log all pairs of array
+    val boxes = arrayOf(1, 2, 3, 4, 5)
+
+    fun logAllBoxPairs(array: Array<Int>) {
+        for (i in array.indices) {
+            for (j in array.indices) {
+                println(StringBuilder().append(array[i]).append(" ").append(array[j]))
+            }
+        }
+    }
+
+    logAllBoxPairs(boxes)
+
+    // O(n * n) -> O(n^2) - quadratic time
+
+
 
 // -------
 
