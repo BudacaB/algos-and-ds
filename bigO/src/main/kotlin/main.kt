@@ -69,21 +69,38 @@ fun main(args: Array<String>) {
 
 
     // log all pairs of array
-    val boxes = arrayOf(1, 2, 3, 4, 5)
+//    val boxes = arrayOf(1, 2, 3, 4, 5)
+//
+//    fun logAllBoxPairs(array: Array<Int>) {
+//        for (i in array.indices) {
+//            for (j in array.indices) {
+//                println(StringBuilder().append(array[i]).append(" ").append(array[j]))
+//            }
+//        }
+//    }
+//
+//    logAllBoxPairs(boxes)
 
-    fun logAllBoxPairs(array: Array<Int>) {
-        for (i in array.indices) {
-            for (j in array.indices) {
-                println(StringBuilder().append(array[i]).append(" ").append(array[j]))
+    // O(n * n) -> O(n^2) - quadratic time
+
+// -------
+
+    fun printAllNumbersThenAllPairSums(numbers: Array<Int>) {
+        println("Print these numbers")
+        numbers.forEach { number -> println(number) }
+
+        println("and these are their sums:")
+        numbers.forEach { firstNumber ->
+            run {
+                numbers.forEach { secondNumber -> println(firstNumber + secondNumber) }
             }
         }
     }
 
-    logAllBoxPairs(boxes)
+    printAllNumbersThenAllPairSums(numbers = arrayOf(1, 2, 3, 4, 5))
 
-    // O(n * n) -> O(n^2) - quadratic time
-
-
+    // O(n + n^2) -> O(n^2)
+    // Rule 4 - drop non dominants
 
 // -------
 

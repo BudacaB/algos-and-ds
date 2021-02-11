@@ -1,3 +1,7 @@
+## Data Structures + Algorithms = Programs
+
+---
+
 ## Big O asymptotic analysis (Big O notation)
 
 - how long an algorithm takes to run
@@ -56,6 +60,15 @@ function anotherFunChallenge(input) {
 2. Remove constants
 3. Different terms for inputs
 4. Drop non dominants
+
+---
+
+## What is good code?
+
+- Readable
+- Scalable
+    - Speed - Time Complexity
+    - Memory - Space Complexity
 
 ---
 
