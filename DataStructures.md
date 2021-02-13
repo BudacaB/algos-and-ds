@@ -7,13 +7,19 @@
 - how long an algorithm takes to run
 - as elements passed as input increase, how many operations do we have to do? (algorithmic efficiency)
 
-### What is good code?
-- readable
-- scalable -> measured by Big O
-
 ### Types:
-- O(n) -> Linear time
-- O(1) -> Constant time
+- O(1) -> Constant time - no loops
+- O(log N) -> Logarithmic - usually searching algorithms have log n if they are sorted (Binary Search)
+- O(n) -> Linear time - for loops, while loops through n items
+- O(n log(n)) -> Log Linear - usually sorting operations
+- O(n^2) -> Quadratic - every element in a collection needs to be compared to ever other element. Two
+  nested loops
+- O(2^n) -> Exponential - recursive algorithms that solve a problem of size N
+- O(n!) -> Factorial - you are adding a loop for every element
+
+Iterating through half a collection is still O(n)
+
+Two separate collections: O(a * b)
 
 
 ```
@@ -59,6 +65,11 @@ function anotherFunChallenge(input) {
 1. Worst case
 2. Remove constants
 3. Different terms for inputs
+   
+   Different inputs should have different variables. O(a+b). A and B arrays nested would be
+   O(a*b)
+- for steps in order +
+- for nested steps *
 4. Drop non dominants
 
 ---
@@ -66,9 +77,23 @@ function anotherFunChallenge(input) {
 ## What is good code?
 
 - Readable
-- Scalable
+- Scalable - measured by Big O
     - Speed - Time Complexity
     - Memory - Space Complexity
+      - heap - storing variables
+      - stack - keeping track of function calls
+  
+### What can cause Time in a function?
+- Operations (+, -, *, /)
+- Comparisons (<, >, ==)
+- Looping (for, while)
+- Outside Function call (function())
+
+### What causes Space complexity?
+- Variables
+- Data Structures
+- Function Call
+- Allocations
 
 ---
 

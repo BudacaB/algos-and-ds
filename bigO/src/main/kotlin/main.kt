@@ -85,27 +85,29 @@ fun main(args: Array<String>) {
 
 // -------
 
-    fun printAllNumbersThenAllPairSums(numbers: Array<Int>) {
-        println("Print these numbers")
-        numbers.forEach { number -> println(number) }
-
-        println("and these are their sums:")
-        numbers.forEach { firstNumber ->
-            run {
-                numbers.forEach { secondNumber -> println(firstNumber + secondNumber) }
-            }
-        }
-    }
-
-    printAllNumbersThenAllPairSums(numbers = arrayOf(1, 2, 3, 4, 5))
+//    fun printAllNumbersThenAllPairSums(numbers: Array<Int>) {
+//        println("Print these numbers")
+//        numbers.forEach { number -> println(number) }
+//
+//        println("and these are their sums:")
+//        numbers.forEach { firstNumber ->
+//            run {
+//                numbers.forEach { secondNumber -> println(firstNumber + secondNumber) }
+//            }
+//        }
+//    }
+//
+//    printAllNumbersThenAllPairSums(numbers = arrayOf(1, 2, 3, 4, 5))
 
     // O(n + n^2) -> O(n^2)
     // Rule 4 - drop non dominants
 
 // -------
 
+    // E.g. O(1) -> constant time
+
 //    val boxes = Array(6){"$it"}
-//    // O(1) -> constant time
+
 //    val compressFirstBox = { boxes: Array<String> -> println(boxes[0])}
 //    fun compressFirstBox2(boxes: Array<String>) {
 //        println(boxes[0])
@@ -115,4 +117,50 @@ fun main(args: Array<String>) {
 //    compressFirstBox(boxes)
 //    compressFirstBox2(boxes)
 
+// -------
+
+//    Space complexity
+
+//    fun boo(n: Array<Int>) {
+//        for (i in n.indices) {
+//            println("Boo!")
+//        }
+//    }
+//
+//    boo(arrayOf(1, 2, 3, 4, 5)) // Space complexity of O(1)
+
+
+//    fun arrayOfHiIntTimes(n: Int): Array<String> {
+//        val hiArray =  Array(n){"$it"}
+//        for (i in 0 until n) {
+//            hiArray[i] = "hi"
+//        }
+//        return hiArray
+//    }
+//
+//    println(arrayOfHiIntTimes(6).forEach { println(it) }) // Space complexity of O(n)
+
+// -------
+
+    // Find 1st, find Nth
+
+    val array1 = arrayOf("hi", "my", "teddy")
+    array1[0] // O(1)
+    array1[array1.size - 1] // O(1)
+
+
+    // Compare dates
+
+    val array2 = arrayOf(
+        mapOf("tweet" to "hi", "date" to 2012),
+        mapOf("tweet" to "my", "date" to 2014),
+        mapOf("tweet" to "teddy", "date" to 2018)
+    )
+
+    // O(n^2) - each element must be compared with the others - nested loop
+
+
 }
+
+
+
