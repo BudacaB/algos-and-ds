@@ -101,9 +101,15 @@ function anotherFunChallenge(input) {
 
 - organizes items sequentially in memory
 - smallest footprint
-- ideal for storing data to iterate through it, especially if knowind the indexes of the stored items
+- ideal for storing data to iterate through it, especially if knowing the indexes of the stored items
 - lookup - O(1)
 - push - O(1)
 - insert - O(n)
 - delete - O(n)
+
+### Types
+
+- Static - size declared beforehand
+- Dynamic - copy and rebuild array at a new location in memory - don't need to declare size ahead of time
+    - push or 'append' might become O(n) if the programming language iterates through the elements to copy them in a new larger space (usually double than the initial)
 
